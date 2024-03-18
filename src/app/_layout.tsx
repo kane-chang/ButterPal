@@ -3,7 +3,7 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-
+import { Image } from 'react-native';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -47,8 +47,7 @@ function RootLayoutNav() {
 
   return (
       <Stack>
-        <Stack.Screen name="welcome" />
-        <Stack.Screen name="(auth)" />
+        <Stack.Screen name="index" options={{headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}} />
         {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
       </Stack>
   );

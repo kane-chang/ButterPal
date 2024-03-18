@@ -5,6 +5,7 @@ export const defaultStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.white,
+        padding: 24,
     },
     inputField: {
         height: 44,
@@ -18,6 +19,7 @@ export const defaultStyles = StyleSheet.create({
         backgroundColor: Colors.secondaryGreen,
         height: 54,
         borderRadius: 8,
+        padding: 8,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -25,11 +27,17 @@ export const defaultStyles = StyleSheet.create({
         backgroundColor: Colors.primaryGreen,
         height: 54,
         borderRadius: 8,
+        padding: 8,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    btnText: {
+    btnTextPrimary: {
         color: Colors.white,
+        fontSize: 20,
+        fontFamily: 'Inter',
+    },
+    btnTextSecondary: {
+        color: Colors.black,
         fontSize: 20,
         fontFamily: 'Inter',
     },
@@ -49,4 +57,14 @@ export const defaultStyles = StyleSheet.create({
         borderTopColor: Colors.lightGrey,
         borderTopWidth: StyleSheet.hairlineWidth,
     },
+    header: {
+        fontSize: 36,
+        fontFamily: 'Inter',
+        fontWeight: "600",
+    },
+    subHeader: {
+        fontSize: 24,
+        fontFamily: 'Inter',
+        fontWeight: "600",
+    }
 })

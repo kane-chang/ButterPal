@@ -7,6 +7,7 @@ const orange = '#FEA82E';
 const warningRed = '#D9594C';
 const lightGrey = '#D8D8D8';
 const white = '#FFF';
+const black = '#000';
 
 export default {
   primaryGreen: primaryGreen,
@@ -17,6 +18,7 @@ export default {
   orange: orange,
   warningRed: warningRed,
   lightGrey: lightGrey,
+  black: black,
   white: white,
   light: {
     text: '#000',
