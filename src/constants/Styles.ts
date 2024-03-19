@@ -7,11 +7,16 @@ export const defaultStyles = StyleSheet.create({
         backgroundColor: Colors.white,
         padding: 24,
     },
+    formContainer: {
+        flex: 1,
+        gap: 16,
+        marginTop: 32,
+    },
     inputField: {
         height: 44,
         borderWidth: 1,
         borderColor: Colors.lightGrey,
-        borderRadius: 8,
+        borderRadius: 4,
         padding: 10,
         backgroundColor: Colors.white,
     },
@@ -59,12 +64,11 @@ export const defaultStyles = StyleSheet.create({
     },
     header: {
         fontSize: 36,
-        fontFamily: 'Inter',
-        fontWeight: "600",
+        fontFamily: 'Inter600',
+    
     },
     subHeader: {
         fontSize: 24,
-        fontFamily: 'Inter',
-        fontWeight: "600",
+        fontFamily: 'Inter400',
     }
 })

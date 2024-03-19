@@ -8,8 +8,10 @@ const Welcome = () => {
   return (
     <View style={defaultStyles.container}>
       {/* Welcome Text */}
-      <View style={{height: '70%'}}>
+      <View style={{height: '10%', display: 'flex', justifyContent: 'flex-end', marginBottom: 6}}>
         <Text style={defaultStyles.header}>Hello,</Text>
+      </View>
+      <View style={{height: '60%'}}>
         <Text style={defaultStyles.subHeader}>Welcome to ButterPal, a place where you can help a pal, or ask a pal for help</Text>
       </View>
 
