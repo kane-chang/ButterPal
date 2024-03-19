@@ -1,9 +1,10 @@
+import { Ionicons } from '@expo/vector-icons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { Image } from 'react-native';
+import { Image, Text } from 'react-native';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -58,7 +59,11 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="index" options={{headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}} />
         <Stack.Screen name="(auth)/login" options={{headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}} />
-        {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
+        <Stack.Screen name="(auth)/(signup)/signup" options={{headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}} />
+        <Stack.Screen name="(auth)/(signup)/createProfile" options={{headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}} />
+        <Stack.Screen name="(auth)/(signup)/createProfile2" options={{headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}} />
+        <Stack.Screen name='(tabs)' options={{headerShown: false}}/>
+        {/* <Stack.Screen name='(tabs)' options={{headerRight: props => <><Ionicons name="filter" size={24}/><Text style={{marginLeft:6, fontFamily:'Inter'}}>Sort</Text></>, headerLeft: props => <Image source={require('../../assets/images/toastLogo.png')} style={{marginLeft:10}}/>}}/> */}
       </Stack>
   );
 }

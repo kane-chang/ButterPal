@@ -63,7 +63,7 @@ export const defaultStyles = StyleSheet.create({
         borderTopWidth: StyleSheet.hairlineWidth,
     },
     header: {
-        fontSize: 36,
+        fontSize: 32,
         fontFamily: 'Inter600',
     
     },

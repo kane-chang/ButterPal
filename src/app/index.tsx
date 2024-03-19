@@ -17,7 +17,7 @@ const Welcome = () => {
 
       {/* Login/Signup Buttons  */}
       <View style={{gap: 8}}>
-        <TouchableOpacity style={defaultStyles.btnPrimary} onPress={()=>router.push('/(auth)/login')}><Text style={defaultStyles.btnTextPrimary}>Log in</Text></TouchableOpacity>
+        <TouchableOpacity style={defaultStyles.btnPrimary} onPress={()=>router.push('/(auth)/login')}><Text style={defaultStyles.btnTextPrimary}>Log In</Text></TouchableOpacity>
         <TouchableOpacity style={defaultStyles.btnSecondary} onPress={()=>router.push('/(auth)/(signup)/signup')}><Text style={defaultStyles.btnTextSecondary}>Sign Up</Text></TouchableOpacity>
       </View>
     </View>

@@ -41,7 +41,7 @@ const signup = () => {
             style={defaultStyles.inputField}
             placeholderTextColor={Colors.darkGrey}
           />
-        </View> 
+        </View>
       </View>
         {/* Next Button  */}
         <View style={{ gap: 8 }}>
