@@ -1,9 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { defaultStyles } from '@/constants/Styles'
 
 const addRequest = () => {
   return (
-    <View>
+    <View style={defaultStyles.container}>
       <Text>addRequest</Text>
     </View>
   )

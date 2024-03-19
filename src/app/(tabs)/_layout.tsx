@@ -22,6 +22,7 @@ const headerOptions = {
     />
   ),
   title: undefined,
+  headerShadowVisible: false,
 }
 
 const Layout = () => {
@@ -36,8 +37,10 @@ const Layout = () => {
           fontFamily: "Inter",
         },
         tabBarStyle: {
-          backgroundColor: Colors.primaryGreen
-        }
+          backgroundColor: Colors.primaryGreen,
+          paddingTop: 16,
+          height: 100,
+        },
       }}
     >
       <Tabs.Screen
@@ -47,7 +50,7 @@ const Layout = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home-outline" color={color} size={size} />
           ),
-          ...headerOptions
+          ...headerOptions,
         }}
       />
       <Tabs.Screen
@@ -57,7 +60,7 @@ const Layout = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="cart-outline" color={color} size={size} />
           ),
-          ...headerOptions
+          ...headerOptions,
         }}
       />
       <Tabs.Screen
@@ -67,7 +70,7 @@ const Layout = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="add-circle-outline" color={color} size={42} />
           ),
-          ...headerOptions
+          ...headerOptions,
         }}
       />
       <Tabs.Screen
@@ -81,7 +84,7 @@ const Layout = () => {
               size={size}
             />
           ),
-          ...headerOptions
+          ...headerOptions,
         }}
       />
       <Tabs.Screen
@@ -91,7 +94,7 @@ const Layout = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person-outline" color={color} size={size} />
           ),
-          ...headerOptions
+          ...headerOptions,
         }}
       />
     </Tabs>
