@@ -1,50 +1,106 @@
-import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+import React from "react";
+import { Tabs } from "expo-router";
+import Colors from "@/constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
+import { Text, Image, View, Platform } from "react-native";
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+const headerOptions = {
+  headerRight: () => (
+    <View style={{display:'flex', flexDirection:'row', marginRight: 24,}}>
+      <Ionicons name="filter" size={24} />
+      <Text
+        style={{ marginLeft: 6, fontFamily: "Inter" }}
+      >
+        Sort
+      </Text>
+    </View>
+  ),
+  headerLeft: () => (
+    <Image
+      source={require("@/../assets/images/toastLogo.png")}
+      style={{ marginLeft: 24 }}
+    />
+  ),
+  title: undefined,
+  headerShadowVisible: false,
 }
 
-// export default function TabLayout() {
-//   return (
-//     <Tabs
-//       screenOptions={{
-//         // Disable the static render of the header on web
-//         // to prevent a hydration error in React Navigation v6.
-//       }}>
-//       <Tabs.Screen
-//         name="index"
-//         options={{
-//           title: 'Tab One',
-//           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-//           headerRight: () => (
-//             <Link href="/modal" asChild>
-//               <Pressable>
-//                 {({ pressed }) => (
-//                   <FontAwesome
-//                     name="info-circle"
-//                     size={25}
-//                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-//                   />
-//                 )}
-//               </Pressable>
-//             </Link>
-//           ),
-//         }}
-//       />
-//       <Tabs.Screen
-//         name="cart"
-//         options={{
-//           title: 'Tab Two',
-//           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-//         }}
-//       />
-//     </Tabs>
-//   );
-// }
+const Layout = () => {
+  return (
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: Colors.secondaryGreen,
+        tabBarInactiveTintColor: Colors.white,
+        tabBarActiveBackgroundColor: Colors.primaryGreen,
+        tabBarInactiveBackgroundColor: Colors.primaryGreen,
+        tabBarLabelStyle: {
+          fontFamily: "Inter",
+        },
+        tabBarStyle: {
+          backgroundColor: Colors.primaryGreen,
+          paddingTop: 16,
+          height: 100,
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="homepage"
+        options={{
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home-outline" color={color} size={size} />
+          ),
+          ...headerOptions,
+        }}
+      />
+      <Tabs.Screen
+        name="cart"
+        options={{
+          tabBarLabel: "Cart",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="cart-outline" color={color} size={size} />
+          ),
+          ...headerOptions,
+        }}
+      />
+      <Tabs.Screen
+        name="addRequest"
+        options={{
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="add-circle-outline" color={color} size={42} />
+          ),
+          ...headerOptions,
+        }}
+      />
+      <Tabs.Screen
+        name="notifications"
+        options={{
+          tabBarLabel: "Notifications",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name="chatbox-ellipses-outline"
+              color={color}
+              size={size}
+            />
+          ),
+          ...headerOptions,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarLabel: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person-outline" color={color} size={size} />
+          ),
+          ...headerOptions,
+        }}
+      />
+    </Tabs>
+  );
+};
+
+export default Layout;
+
+

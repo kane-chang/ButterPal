@@ -5,12 +5,18 @@ export const defaultStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.white,
+        padding: 24,
+    },
+    formContainer: {
+        flex: 1,
+        gap: 16,
+        marginTop: 32,
     },
     inputField: {
         height: 44,
         borderWidth: 1,
         borderColor: Colors.lightGrey,
-        borderRadius: 8,
+        borderRadius: 4,
         padding: 10,
         backgroundColor: Colors.white,
     },
@@ -18,6 +24,7 @@ export const defaultStyles = StyleSheet.create({
         backgroundColor: Colors.secondaryGreen,
         height: 54,
         borderRadius: 8,
+        padding: 8,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -25,11 +32,17 @@ export const defaultStyles = StyleSheet.create({
         backgroundColor: Colors.primaryGreen,
         height: 54,
         borderRadius: 8,
+        padding: 8,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    btnText: {
+    btnTextPrimary: {
         color: Colors.white,
+        fontSize: 20,
+        fontFamily: 'Inter',
+    },
+    btnTextSecondary: {
+        color: Colors.black,
         fontSize: 20,
         fontFamily: 'Inter',
     },
@@ -49,4 +62,13 @@ export const defaultStyles = StyleSheet.create({
         borderTopColor: Colors.lightGrey,
         borderTopWidth: StyleSheet.hairlineWidth,
     },
+    header: {
+        fontSize: 32,
+        fontFamily: 'Inter600',
+    
+    },
+    subHeader: {
+        fontSize: 24,
+        fontFamily: 'Inter400',
+    }
 })
