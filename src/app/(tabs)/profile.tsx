@@ -7,7 +7,7 @@ const profile = () => {
   return (
     <View style={defaultStyles.container}>
       <Text>profile</Text>
-      <TouchableOpacity style={defaultStyles.btnPrimary} onPress={() => router.replace('/')}><Text>Log Out</Text></TouchableOpacity>
+      <TouchableOpacity style={defaultStyles.btnPrimary} onPress={() => router.replace('/')}><Text style={defaultStyles.btnTextPrimary}>Log Out</Text></TouchableOpacity>
     </View>
   )
 }
