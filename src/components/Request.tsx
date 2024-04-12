@@ -15,15 +15,15 @@ const Request = () => {
                 <Text style={styles.small}>1.5km away</Text>
                 <View style={{...styles.flexContainer, marginBottom: 24, marginTop: 8}}>
                     <View>
-                        <Image style={styles.image} source={require('../../assets/images/toastLogo.png')}/>
+                        <Image style={styles.image} source={require('../../assets/images/apple.png')}/>
                         <Text>Apples</Text>
                     </View>
                     <View>
-                        <Image source={require('../../assets/images/toastLogo.png')}/>
+                        <Image style={styles.image} source={require('../../assets/images/apple.png')}/>
                         <Text>Butter</Text>
                     </View>
                     <View>
-                        <Image source={require('../../assets/images/toastLogo.png')}/>
+                        <Image style={styles.image} source={require('../../assets/images/apple.png')}/>
                         <Text>Soy Sauce</Text>
                     </View>
                 </View>
