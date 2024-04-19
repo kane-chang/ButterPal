@@ -27,7 +27,7 @@ export type RequestType = {
   total_cost: number;
   user_id: string;
   notes: string | null;
-  desc: string;
+  desc: string | null;
   location: string;
   deadline: string;
   status: RequestStatus;
