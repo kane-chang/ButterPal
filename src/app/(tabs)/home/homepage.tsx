@@ -2,7 +2,7 @@ import { View, Text, FlatList, FlatListComponent } from 'react-native'
 import React from 'react'
 import { defaultStyles } from '@/constants/Styles'
 import Request from '@/components/Request'
-import DATA from '../../../../assets/sample_data/orders'
+import DATA from '../../../../assets/sample_data/requests'
 
 
 const homepage = () => {
