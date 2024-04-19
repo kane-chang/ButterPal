@@ -25,6 +25,7 @@ export type RequestType = {
   created_at: string;
   total_cost: number;
   user_id: string;
+  desc: string;
   location: string;
   deadline: string;
   status: RequestStatus;

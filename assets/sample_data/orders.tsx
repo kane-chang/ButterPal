@@ -1,7 +1,3 @@
-import { View, Text, FlatList, FlatListComponent } from 'react-native'
-import React from 'react'
-import { defaultStyles } from '@/constants/Styles'
-import Request from '@/components/Request'
 import { RequestType } from '@/constants/types'
 
 const DATA: RequestType[] = [
@@ -9,10 +5,11 @@ const DATA: RequestType[] = [
     id: 1,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'gbbo_contestant',
+    desc: 'Need this for my gran!',
     location: 'w60ne',
     deadline: '2222',
-    status: 'Accepted',
+    status: 'New',
     request_items: [
       {
         request_id: 1,
@@ -51,7 +48,8 @@ const DATA: RequestType[] = [
     id: 2,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'loving_mom',
+    desc: 'Baking my son birthday cake',
     location: 'w60ne',
     deadline: '2222',
     status: 'Accepted',
@@ -72,7 +70,8 @@ const DATA: RequestType[] = [
     id: 3,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'jacky',
+    desc: 'Help me please',
     location: 'w60ne',
     deadline: '2222',
     status: 'Accepted',
@@ -94,7 +93,8 @@ const DATA: RequestType[] = [
     id: 4,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'fakeuser',
+    desc: 'Hungry',
     location: 'w60ne',
     deadline: '2222',
     status: 'Accepted',
@@ -116,7 +116,8 @@ const DATA: RequestType[] = [
     id: 5,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'samuelson',
+    desc: 'super appreciate it',
     location: 'w60ne',
     deadline: '2222',
     status: 'Accepted',
@@ -158,7 +159,8 @@ const DATA: RequestType[] = [
     id: 6,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'hunky',
+    desc: 'you won\'t regret it',
     location: 'w60ne',
     deadline: '2222',
     status: 'Accepted',
@@ -190,7 +192,8 @@ const DATA: RequestType[] = [
     id: 7,
     created_at: '1111',
     total_cost: 10,
-    user_id: 'abc',
+    user_id: 'skeptical_susan',
+    desc: 'does this app work?',
     location: 'w60ne',
     deadline: '2222',
     status: 'Accepted',
@@ -220,15 +223,4 @@ const DATA: RequestType[] = [
   },
 ]
 
-const homepage = () => {
-  return (
-    <View style={defaultStyles.container}>
-      <Text style={defaultStyles.header}>Request Board</Text>
-      <View>
-        <FlatList data={DATA} renderItem={({item}) => <Request request={item}/>} keyExtractor={item=>item.id.toString()}/>
-      </View>
-    </View>
-  )
-}
-
-export default homepage
+export default DATA
