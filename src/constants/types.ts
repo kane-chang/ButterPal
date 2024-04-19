@@ -19,12 +19,14 @@ export const RequestStatusList: RequestStatus[] = [
 ];
 
 export type RequestStatus = 'New' | 'Accepted' | 'Purchased' | 'Delivered';
+export type UnavailableOptions = "Don't buy" | 'Buy any alternative' | 'Buy cheapest alternative';
 
 export type RequestType = {
   id: number;
   created_at: string;
   total_cost: number;
   user_id: string;
+  notes: string | null;
   desc: string;
   location: string;
   deadline: string;
@@ -36,6 +38,7 @@ export type RequestItem = {
   item: Item;
   request_id: number;
   quantity: number;
+  if_unavailable: UnavailableOptions;
 };
 
 export type Profile = {
