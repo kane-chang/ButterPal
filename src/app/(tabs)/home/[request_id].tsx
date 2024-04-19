@@ -6,6 +6,7 @@ import {
   StyleSheet,
   FlatList,
   Image,
+  ScrollView,
 } from "react-native";
 import React from "react";
 import Request from "@/components/Request";
@@ -25,6 +26,7 @@ const RequestDetails = () => {
   }
 
   return (
+    <ScrollView>
     <View style={defaultStyles.container}>
       <Text style={defaultStyles.header2}>
         Help a pal with {request.request_items.length}{" "}
@@ -38,23 +40,35 @@ const RequestDetails = () => {
         <Ionicons name="location-outline" size={16} />
         <Text style={defaultStyles.inter500}>{request.location}</Text>
       </View>
-      <FlatList data={request.request_items} renderItem={({item}) => <View style={styles.itemCard}>
-        <View style={styles.itemContainer}>
-          <Image
-            style={styles.image}
-            source={{uri: item.item.uri || '../../../../assets/images/apple.png'}}
-          />
-          <View style={styles.infoContainer}>
-            <Text style={styles.itemHeader}>{item.item.name}</Text>
-            <Text style={styles.itemCost}>{item.item.price}</Text>
-            <Text style={styles.miniText}>If unavailable:</Text>
-            <View style={styles.unavailabilityBox}>
-              <Text style={styles.unavailabilityText}>{item.if_unavailable}</Text>
+      <View>
+      <FlatList
+        data={request.request_items}
+        renderItem={({ item }) => (
+          <View style={styles.itemCard}>
+            <View style={styles.itemContainer}>
+              <Image
+                style={styles.image}
+                source={{
+                  uri: item.item.uri || "../../../../assets/images/apple.png",
+                }}
+              />
+              <View style={styles.infoContainer}>
+                <Text style={styles.itemHeader}>{item.item.name}</Text>
+                <Text style={styles.itemCost}>£{item.item.price}</Text>
+                <Text style={styles.miniText}>If unavailable:</Text>
+                <View style={styles.unavailabilityBox}>
+                  <Text style={styles.unavailabilityText}>
+                    {item.if_unavailable}
+                  </Text>
+                </View>
+              </View>
             </View>
           </View>
-        </View>
-      </View>} keyExtractor={item=>item.request_id.toString()}/>
-
+        )}
+        keyExtractor={(item) => item.request_id.toString()}
+      />
+      </View>
+      
       {/* <View style={styles.itemCard}>
         <View style={styles.itemContainer}>
           <Image
@@ -71,15 +85,23 @@ const RequestDetails = () => {
           </View>
         </View>
       </View> */}
-      
-      <Text>Notes: {request.notes}</Text>
-      <Text>Description: {request.desc}</Text>
-      <Text>Need items by: {request.deadline}</Text>
-      <Text>Posted by: {request.user_id}</Text>
+
+      <Text style={styles.notesText}>Delivery Notes: {request.notes}</Text>
+      <Text style={{...defaultStyles.body, marginBottom: 16, fontSize: 14}}>Description: {request.desc}</Text>
+      <Text style={styles.boldText}>Need items by: {request.deadline}</Text>
+      <View style={styles.posterContainer}>
+        <Text style={styles.boldText}>Posted by:</Text>
+        <View style={{display:'flex', flexDirection:'row', gap: 8}}>
+        <Ionicons name='person-outline' size={32}/>
+        <Text style={styles.boldText}>{request.user_id}</Text>
+        </View>
+        <Text style={styles.deadlineText}>{request.deadline}</Text>
+      </View>
       <TouchableOpacity style={defaultStyles.btnSecondary}>
         <Text style={defaultStyles.btnTextSecondary}>I can help!</Text>
       </TouchableOpacity>
     </View>
+    </ScrollView>
   );
 };
 
@@ -104,6 +126,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.lightGrey,
     borderRadius: 8,
+    marginBottom: 16,
   },
   itemContainer: {
     display: "flex",
@@ -111,7 +134,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   infoContainer: {
-    display: 'flex',
+    display: "flex",
     flex: 1,
     gap: 4,
   },
@@ -121,28 +144,47 @@ const styles = StyleSheet.create({
     objectFit: "contain",
   },
   itemHeader: {
-    fontFamily: 'Inter600',
+    fontFamily: "Inter600",
     fontSize: 16,
   },
   itemCost: {
-    fontFamily: 'Inter400',
+    fontFamily: "Inter400",
     fontSize: 14,
     color: Colors.darkGrey,
   },
   miniText: {
-    fontFamily: 'Inter400',
+    fontFamily: "Inter400",
     fontSize: 10,
   },
   unavailabilityBox: {
     padding: 7,
     backgroundColor: Colors.lightGrey,
-    display: 'flex',
-    justifyContent: 'center',
-    paddingLeft: 16
+    display: "flex",
+    justifyContent: "center",
+    paddingLeft: 16,
   },
   unavailabilityText: {
-    fontFamily: 'Inter400',
+    fontFamily: "Inter400",
     fontSize: 12,
+  },
+  notesText: {
+    fontFamily: "Inter400",
+    fontSize: 14,
+    marginTop: 16,
+  },
+  posterContainer: {
+    display: "flex",
+    marginTop: 24,
+    marginBottom: 54,
+    gap: 8,
+  },
+  boldText: {
+    fontFamily: "Inter600",
+    fontSize: 16,
+  },
+  deadlineText: {
+    fontFamily: "Inter500",
+    fontSize: 10
   }
 });
 

@@ -9,7 +9,7 @@ const DATA: RequestType[] = [
     desc: 'Need this for my gran!',
     notes: 'call my number',
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '14/04',
     status: 'New',
     request_items: [
       {
@@ -56,7 +56,7 @@ const DATA: RequestType[] = [
     desc: 'Baking my son birthday cake',
     notes: null,
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '02/05',
     status: 'Accepted',
     request_items: [
       {
@@ -135,7 +135,7 @@ const DATA: RequestType[] = [
     desc: 'Help me please',
     notes: 'You can knock three times',
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '21/04',
     status: 'Accepted',
     request_items: [
       {
@@ -160,7 +160,7 @@ const DATA: RequestType[] = [
     desc: 'Hungry',
     notes: 'Leave at door',
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '01/05',
     status: 'Accepted',
     request_items: [
       {
@@ -185,7 +185,7 @@ const DATA: RequestType[] = [
     desc: 'super appreciate it',
     notes: null,
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '12/06',
     status: 'Accepted',
     request_items: [
       {
@@ -232,7 +232,7 @@ const DATA: RequestType[] = [
     desc: 'you won\'t regret it',
     notes: null,
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '09/05',
     status: 'Accepted',
     request_items: [
       {
@@ -268,7 +268,7 @@ const DATA: RequestType[] = [
     desc: 'does this app work?',
     notes: null,
     location: 'w60ne',
-    deadline: '2222',
+    deadline: '30/04',
     status: 'Accepted',
     request_items: [
       {
