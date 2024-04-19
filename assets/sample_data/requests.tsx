@@ -40,7 +40,7 @@ const DATA: RequestType[] = [
         item: {
           id: 123,
           uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
-          name: 'Butter',
+          name: 'Soy Sauce',
           price: 4.0
         },
         if_unavailable: 'Buy any alternative',
@@ -70,6 +70,61 @@ const DATA: RequestType[] = [
         },
         if_unavailable: 'Don\'t buy',
       },
+      {
+        request_id: 1,
+        quantity: 5,
+        item: {
+          id: 123,
+          uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
+          name: 'Soy Sauce',
+          price: 4.0
+        },
+        if_unavailable: 'Don\'t buy',
+      },
+      {
+        request_id: 1,
+        quantity: 5,
+        item: {
+          id: 123,
+          uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
+          name: 'Soy Sauce',
+          price: 4.0
+        },
+        if_unavailable: 'Don\'t buy',
+      },
+      {
+        request_id: 1,
+        quantity: 5,
+        item: {
+          id: 123,
+          uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
+          name: 'Soy Sauce',
+          price: 4.0
+        },
+        if_unavailable: 'Don\'t buy',
+      },
+      {
+        request_id: 1,
+        quantity: 5,
+        item: {
+          id: 123,
+          uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
+          name: 'Soy Sauce',
+          price: 4.0
+        },
+        if_unavailable: 'Don\'t buy',
+      },
+      {
+        request_id: 1,
+        quantity: 5,
+        item: {
+          id: 123,
+          uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
+          name: 'Soy Sauce',
+          price: 4.0
+        },
+        if_unavailable: 'Don\'t buy',
+      }
     ]
   },
   {
@@ -89,7 +144,7 @@ const DATA: RequestType[] = [
         item: {
           id: 123,
           uri: 'https://kikkomanusa.com/homecooks/wp-content/uploads/2023/05/00041390000010_A1N1___15.png',          
-          name: 'Butter',
+          name: 'Soy Sauce',
           price: 4.0
         },
         if_unavailable: 'Don\'t buy',

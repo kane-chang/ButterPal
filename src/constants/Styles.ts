@@ -67,11 +67,19 @@ export const defaultStyles = StyleSheet.create({
         fontFamily: 'Inter600',
     },
     header2: {
-        fontSize: 18,
+        fontSize: 24,
         fontFamily: 'Inter600',
     },
     subHeader: {
         fontSize: 24,
         fontFamily: 'Inter400',
+    },
+    body: {
+        fontSize: 16,
+        fontFamily: 'Inter400'
+    },
+    inter500: {
+        fontSize: 16,
+        fontFamily: 'Inter500'
     }
 })
