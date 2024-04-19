@@ -8,7 +8,7 @@ import {
   Image,
   ScrollView,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import Request from "@/components/Request";
 import { useLocalSearchParams } from "expo-router";
 import DATA from "../../../../assets/sample_data/requests";
@@ -16,11 +16,12 @@ import { defaultStyles } from "@/constants/Styles";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
 import ItemCard from "@/components/ItemCard";
+import AcceptRequestModal from "@/components/AcceptRequestModal";
 
 const RequestDetails = () => {
   const { request_id } = useLocalSearchParams();
-
   const request = DATA.find((r) => r.id.toString() === request_id);
+  const [modalVisible, setModalVisible] = useState(false)
 
   if (!request) {
     return <Text>request not found</Text>;
@@ -55,7 +56,8 @@ const RequestDetails = () => {
         </View>
         <Text style={styles.deadlineText}>{request.deadline}</Text>
       </View>
-      <TouchableOpacity style={defaultStyles.btnSecondary}>
+      <AcceptRequestModal modalVisible={modalVisible} setModalVisible={setModalVisible}/>
+      <TouchableOpacity style={defaultStyles.btnSecondary} onPress={()=>setModalVisible(true)}>
         <Text style={defaultStyles.btnTextSecondary}>I can help!</Text>
       </TouchableOpacity>
     </View>
