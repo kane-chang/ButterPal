@@ -27,7 +27,7 @@ Innovative mobile app built with React Native and TypeScript to connect neighbou
 - [Figma Prototype](https://www.figma.com/proto/fXLP8uYmWrcwNdSjYI9UmT/ButterPal?node-id=28-1056&t=AIfB8MFwhs4JfqRh-1)
 
 ## Support 
-For questions, issues, or collaboration opportunities, please visit our [GitHub repository](https://github.com/Alan-Chumbley/Gaming-scheduler) and feel free to reach out to contributors by creating a new issue or directly contacting them through the platform. 
+For questions, issues, or collaboration opportunities, please visit our [GitHub repository](https://github.com/kane-chang/ButterPal) and feel free to reach out to contributors by creating a new issue or directly contacting them through the platform. 
 
 ## Future Contributions
 
