@@ -14,11 +14,15 @@ import Colors from "@/constants/Colors";
 type AcceptRequestModalProps = {
   modalVisible: boolean;
   setModalVisible: Function;
+  acceptedTerms: boolean;
+  setAcceptedTerms: Function; 
 };
 
 const AcceptRequestModal = ({
   modalVisible,
   setModalVisible,
+  acceptedTerms,
+  setAcceptedTerms,
 }: AcceptRequestModalProps) => {
   return (
     <View style={styles.centeredView}>
