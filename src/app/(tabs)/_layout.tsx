@@ -44,8 +44,9 @@ const Layout = () => {
       }}
     >
       <Tabs.Screen
-        name="homepage"
+        name="home"
         options={{
+          headerTitle: "Requests",
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home-outline" color={color} size={size} />

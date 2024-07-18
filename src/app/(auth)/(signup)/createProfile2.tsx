@@ -39,7 +39,7 @@ const createProfile2 = () => {
           <View style={{ gap: 8 }}>
             <TouchableOpacity
               style={defaultStyles.btnSecondary}
-              onPress={() => router.replace("/(tabs)/homepage")}
+              onPress={() => router.replace("/(tabs)/home/homepage")}
             >
               <Text style={defaultStyles.btnTextPrimary}>Confirm Account</Text>
             </TouchableOpacity>

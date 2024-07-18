@@ -39,7 +39,7 @@ const signup = () => {
         <View style={{ gap: 8 }}>
           <TouchableOpacity
             style={defaultStyles.btnPrimary}
-            onPress={() => router.replace("/(tabs)/homepage")}
+            onPress={() => router.replace("/(tabs)/home/homepage")}
           >
             <Text style={defaultStyles.btnTextPrimary}>Log In</Text>
           </TouchableOpacity>
